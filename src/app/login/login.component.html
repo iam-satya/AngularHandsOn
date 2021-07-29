@@ -1,0 +1,42 @@
+<head>
+
+     
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link rel="stylesheet" href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+     
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+     
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+    </script>
+     
+    <script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    </script>
+</head>
+<form #loginform="ngForm" (ngSubmit)="login(loginform.value)">
+  <div>
+        <legend style="color: rgb(233, 12, 204);">LOGIN:</legend>
+
+        <label for="u_name" style="font-size: 20px;"><i aria-hidden="true"></i>Username:&nbsp;</label>
+        <input type="text" id="u_name" name="user_name" minlength="4" maxlength="20" [(ngModel)]="username" #user_name="ngModel" required>
+        <div class="error" *ngIf="user_name.errors?.minlength">Username should be atleast 4 characters.</div>
+        <div class="error"  *ngIf="user_name.touched && user_name.invalid">Username is required.</div>
+        <br><br>
+        
+        <label for="u_pswd" style="font-size: 20px;"><i aria-hidden="true"></i>Password:&nbsp;</label>
+        <input type="password" id="u_pswd" name="pass_word" minlength="4" maxlength="20" [(ngModel)]="password" #pass_word="ngModel" required>
+        <div class="error" *ngIf="pass_word.errors?.minlength">Password should be atleast 4 characters.</div>
+        <div class="error"  *ngIf="pass_word.touched && pass_word.invalid">Password is required.</div>
+        <br><br>
+
+        <button type="submit" class="btn btn-primary" [disabled]="loginform.invalid">LOGIN</button> 
+    
+    <div class="error" *ngIf="invalid">{{invalid}}</div>
+    </div>
+</form>

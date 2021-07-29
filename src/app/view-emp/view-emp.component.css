@@ -1,0 +1,22 @@
+h1{
+    text-align: center;
+    color:rgb(11, 106, 184);
+}
+
+li{
+    list-style-type: decimal;
+}
+
+div{
+    border:solid 3px rgb(205, 50, 197);
+    width: 30%;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+}
+
+img{
+    height: 120px;
+    width: 120px;
+    float: right;
+}

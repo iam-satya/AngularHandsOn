@@ -1,0 +1,14 @@
+.error
+{
+    color: rgb(255, 8, 0);
+    font-size: 14px;
+}
+
+form
+{
+    width: 40%;
+    text-align: center;
+    margin-left: 30%;
+    margin-top: 30px;
+    background-color:rgb(200, 206, 238)
+}

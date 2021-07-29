@@ -1,0 +1,43 @@
+<head>
+    <title>Bootstrap Buttons</title>
+     
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link rel="stylesheet" href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+     
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+     
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+    </script>
+     
+    <script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    </script>
+</head>
+
+
+
+
+
+
+<p>button click event!!</p>
+
+<button type="button" id="btn_click" class="btn btn-success" (click)="click()">Click Me</button>
+<p>{{result}}</p>
+
+<div>
+<input type="number" [(ngModel)]="value">
+<button type="button" class="btn btn_click" (click)="inc()">Add</button>
+</div>
+
+
+<div style="margin-top: 15px;">
+    <button type="button" (click)="minus()" [disabled]="flag"><i class="fa fa-minus" aria-hidden="true"></i></button>
+    <input type="number" [(ngModel)]="quantity">
+    <button type="button" (click)="plus()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+</div>
